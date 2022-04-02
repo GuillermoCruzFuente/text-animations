@@ -1,0 +1,23 @@
+@import 'reset';
+@import 'text-animations';
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+}
+
+header {
+	width: 75%;
+	height: 100vh;
+	margin: 0 auto;
+
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	h1 {
+		font-size: 5rem;
+		line-height: 1;
+		color: #fff;
+	}
+}

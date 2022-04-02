@@ -1,0 +1,15 @@
+{
+  "name": "text-animations",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.49.10",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.0"
+  }
+}
