@@ -15,13 +15,6 @@ export const SPEED = {
     LUDICROUS: 50
 }
 
-// export enum SPEEDS {
-//     SLOW = 200,
-//     NORMAL = 150,
-//     FAST = 100,
-//     LUDICROUS = 50
-// }
-
 export default class Writer {
     private textContainer: HTMLElement
     private _speed = SPEED.NORMAL
@@ -43,7 +36,7 @@ export default class Writer {
      * @param steps number of characters to move the cursor, negative values advance to left and positive to the right, overflow values will go to the first and last character respectively
      */
     async moveCursor(steps: number) {
-
+        console.log(steps)
     }
 
     /**

@@ -1,23 +1,67 @@
-@import 'reset';
-@import 'text-animations';
+@import "reset";
+@import "text-animations";
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #000;
+	font-family: "Poppins", sans-serif;
+	background-color: rgb(20, 1, 32);
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+nav {
+	background-color: rgba(173, 81, 212, 0.3);
+	backdrop-filter: blur(4px);
+	width: 100vw;
+	height: 80px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	box-shadow: 0px 0px 16px rgba($color: #fff, $alpha: 0.25);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-inline: 2rem;
+
+	a {
+		#logo-animation {
+			// background-color: #333;
+			height: 65px;
+			aspect-ratio: 1.93;
+			// width: 80px;
+		}
+	}
+
+	#menu-animation {
+		background-color: #fff;
+		height: 40px;
+		aspect-ratio: 1;
+		border-radius: 50%;
+	}
 }
 
 header {
 	width: 75%;
 	height: 100vh;
 	margin: 0 auto;
-
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: flex-start;
+	flex-flow: column;
 
-	h1 {
-		font-size: 5rem;
+	padding-top: calc(80px + 2rem);
+
+	h1,
+	p {
+		font-size: 3rem;
 		line-height: 1;
 		color: #fff;
+		text-align: left;
+		font-weight: 900;
 	}
+}
+
+section {
+	min-height: 100vh;
 }

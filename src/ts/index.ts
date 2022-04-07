@@ -1,31 +1,35 @@
 import '../scss/index.scss'
-import Writer, {timer} from './classes/Writer'
+import Writer, {timer, SPEED} from './classes/Writer'
+import Lottie from 'lottie-web'
+import menuAnimation from '../static/lottie/logo.json'
 
-const words = [
-    'Memo',
-    'a Designer',
-    'a Developer'
-]
+const writeRoutine = async () => {
+    let mWriter = new Writer(document.getElementById('header-words') as HTMLElement)
+    mWriter.speed = SPEED.FAST
+    await mWriter.writeWord('I am Memo')
+    
+    await timer(1000)
+    mWriter.speed = SPEED.FAST
+    await mWriter.deleteAll(true)
+    await mWriter.writeWord('I am a Web Developer')
 
-const words2 = [
-    'asfghjkl',
-    'a cfsij soidkf sf',
-    'a sdfionn pppdcpojden dsdf'
-]
-const textWrapper = document.getElementById('header-words') as HTMLElement
+    await timer(1000)
+    mWriter.speed = SPEED.LUDICROUS
+    await mWriter.deleteAll(true)
+    await timer(500)
+    await mWriter.writeWord('I am a UX/UI designer')
 
-let mWriter = new Writer(textWrapper)
-await mWriter.writeWord('Memo')
-await timer(500)
-mWriter.speed = 50
-await mWriter.writeWord(' ayuda')
+    await timer(1000)
+    mWriter.speed = SPEED.LUDICROUS
+    await mWriter.deleteAll(true)
+    await timer(500)
+    await mWriter.writeWord('I am Memo')
+}
 
+writeRoutine()
 
-const writeRoutine = [
-    {
-        text: 'Memo',
-        speed: 1,
-    }
-]
-
-console.log(writeRoutine)
+Lottie.loadAnimation({
+    container: document.getElementById('logo-animation') as HTMLElement,
+    animationData: menuAnimation,
+    loop: false
+})

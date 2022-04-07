@@ -11,5 +11,8 @@
     "sass": "^1.49.10",
     "typescript": "^4.5.4",
     "vite": "^2.9.0"
+  },
+  "dependencies": {
+    "lottie-web": "^5.9.1"
   }
 }
